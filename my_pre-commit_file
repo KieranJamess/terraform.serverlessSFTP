@@ -1,0 +1,17 @@
+#!/bin/sh
+
+Echo "Running Terraform FMT"
+
+terraform fmt
+
+Echo "Running Terraform init (backend false)"
+
+terraform init -backend=false
+
+Echo "Running Terraform validate"
+
+terraform validate
+
+Echo "Running Terraform docs"
+
+terraform-docs markdown . --output-file readme.md

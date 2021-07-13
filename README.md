@@ -2,6 +2,7 @@
 
 Terraform code to create a serverless SFTP container with a public IP and FQDN in Azure, using Atmoz SFTP Docker image. Image here:  https://hub.docker.com/r/atmoz/sftp
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 No requirements.
@@ -47,3 +48,4 @@ No modules.
 ## Outputs
 
 No outputs.
+<!-- END_TF_DOCS -->
