@@ -3,7 +3,7 @@ terraform {
     storage_account_name = "cottfstate"
     container_name       = "tfstate"
     key                  = "sftpterraform.tfstate"
-    access_key           = "7r9gwO9vuilzRaBzNeuuRXDGrz0HybRAaaGEMGt4OSotLEm5ZgkBrBNFLVdQg/g8QmAIfmLU27hQSXbFhoXOsw=="
+    access_key           = "X"
   }
 }
 
