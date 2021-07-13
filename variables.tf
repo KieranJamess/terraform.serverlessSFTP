@@ -51,3 +51,16 @@ variable "password" {
   description = "Password for SFTP container"
   default = "kieran"
 }
+
+variable "private" {
+  description = "Create ACI in private subnet"
+  default = "False"
+  validation {
+    condition     = contains(["False", "True"], var.private)
+    error_message = "Private has to be true or false."
+  }
+}
+
+variable "network_profile_id" {
+  description = "Network profile ID to put the ACI behind if private is true."
+}
