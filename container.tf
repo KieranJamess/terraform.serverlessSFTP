@@ -18,7 +18,7 @@ resource "azurerm_container_group" "sftp" {
     }
 
     environment_variables = {
-        "SFTP_USERS" = "${local.username}:${var.username}:1001"
+        "SFTP_USERS" = "${local.username}:${var.password}:1001"
     }
 
     volume {
