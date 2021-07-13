@@ -19,16 +19,16 @@ resource "azurerm_container_group" "sftp" {
     }
 
     environment_variables = {
-        "SFTP_USERS" = "${local.username}:${var.password}:1001"
+      "SFTP_USERS" = "${local.username}:${var.password}:1001"
     }
 
     volume {
-        name = "sftpfilesystem"
-        mount_path = "/home/${local.username}/upload"
-        share_name = azurerm_storage_share.sftp.name
-        read_only =  false
-        storage_account_name = azurerm_storage_account.sftp.name
-        storage_account_key =  azurerm_storage_account.sftp.primary_access_key
+      name                 = "sftpfilesystem"
+      mount_path           = "/home/${local.username}/upload"
+      share_name           = azurerm_storage_share.sftp.name
+      read_only            = false
+      storage_account_name = azurerm_storage_account.sftp.name
+      storage_account_key  = azurerm_storage_account.sftp.primary_access_key
     }
   }
 }

@@ -3,10 +3,10 @@ provider "azurerm" {
 }
 
 resource "random_string" "storageaccount" {
-  length           = 6
-  upper            = false
-  number           = false
-  special          = false
+  length  = 6
+  upper   = false
+  number  = false
+  special = false
 }
 
 resource "azurerm_storage_account" "sftp" {

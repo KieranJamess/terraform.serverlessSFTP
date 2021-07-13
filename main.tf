@@ -8,7 +8,7 @@ terraform {
 }
 
 locals {
-  name_prefix     = var.name_prefix
-  location        = var.location
-  username        = var.username
+  name_prefix = var.name_prefix
+  location    = var.location
+  username    = var.username
 }
